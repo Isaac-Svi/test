@@ -1,0 +1,105 @@
+body,
+html {
+    margin: 0;
+    height: 100%;
+    background-color: var(--color1);
+}
+:root {
+    --color1: #000;
+    --color2: white;
+    --color3: #2c2e43;
+}
+h1,
+h3 {
+    color: var(--color2);
+}
+main,
+footer,
+.container > div {
+    display: flex;
+    justify-content: center;
+}
+.container {
+    height: 100%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 20px;
+    position: absolute;
+    top: 0;
+    left: 200px;
+    right: 0;
+    bottom: 0;
+    -moz-transition: left 0.5s ease;
+    transition: left 0.5s ease;
+    background-color: var(--color1);
+}
+.container :first-child {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: var(--color1);
+}
+.container :nth-child(2) {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: var(--color1);
+}
+.f {
+    background-color: #334257;
+    border-radius: 6px;
+    transition: 0.5s;
+    width: 23vw;
+    padding: 10px;
+}
+.f:hover {
+    box-shadow: 5px 10px 2px #334257;
+    transition: 0.6s;
+    transform: translate(0, -15px);
+}
+img {
+    height: 30vh;
+    width: 20vw;
+}
+span {
+    background-color: darkblue;
+}
+.sidebar {
+    background-color: black;
+    width: 150px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+input[type='checkbox'] {
+    display: none;
+}
+input:checked ~ .container {
+    left: 0;
+}
+input:checked ~ label {
+    left: 0;
+}
+label {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 150px;
+    background-color: blue;
+    -moz-transition: left 0.5s ease;
+    transition: left 0.5s ease;
+}
+.side-nav a {
+    color: darkgray;
+}
+a {
+    text-decoration: none;
+    margin-left: 10px;
+}
+.footer {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    height: 15vh;
+    background-color: darkblue;
+}

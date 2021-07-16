@@ -1,0 +1,339 @@
+
+
+h1, h3{
+    color: var(--color2);
+}
+
+ main, .footer, .container > div{
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    overflow-y: scroll;
+
+}
+
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 20px;
+    position: absolute;
+    top: 0;
+    left: 150px;
+    right: 0;
+    bottom: 0;
+    -moz-transition: left 0.5s ease; 
+    transition: left 0.5s ease;
+    background-color: var(--color1);
+
+
+
+
+}
+
+
+.container :first-child{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: var(--color1)
+    
+}
+
+.container :nth-child(2){
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: var(--color1)
+    
+}
+ 
+
+
+.f{
+    background-color: var(--color4);
+    border-radius: 6px;
+    transition: 0.5s;
+    height: 33vh;
+    display: flex;
+    align-items: center;
+    
+}
+
+.b {
+    margin-bottom: 100px;
+}
+
+
+.f:hover{
+    box-shadow: 10px 10px 10px var(--color3);
+    transition: 0.6s;
+    transform: translate(0, -15px);
+}
+
+
+img {
+    height: 28vh;
+    max-width: 50vw;
+    width: 20vw;
+}
+
+span{
+    background-color: var(--color3);
+    padding-left: 3px;
+}
+
+
+ 
+
+.sidebar {
+    background-color: var(--color4);
+    width: 140px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    line-height: 3;
+    border-right: 3px solid var(--pink);
+
+}
+
+.pen{
+    font-size: 40px;
+    color: white;
+}
+
+
+hr{
+    height: 3px;
+    border-radius: 3px;
+    width: 90%;
+    margin: auto;
+    background-color: var(--yellow);
+}
+
+hr:first-of-type{
+    background-color: var(--lime);
+}
+
+input[type='checkbox']{
+    display: none;
+}
+
+input:checked ~ .container { 
+    left: 0;
+}
+
+input:checked ~ label {
+    left: 0;
+}
+
+label {
+    z-index: 2;
+    width: 20px;
+    position: absolute;
+    top: 0;
+    left: 140px;
+    background-color: var(--color3);
+    -moz-transition: left 0.5s ease;
+    transition: left 0.5s ease;
+}
+
+
+
+
+
+.footer{
+    justify-content: space-between;
+    align-items: center;
+    height: 13vh;
+    background-color: var(--color1);
+    border-top: 3px solid 	var(--color3);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+}
+
+.u{
+    width: 40%;
+    text-align: center;
+}
+
+li{
+    display: inline;
+    margin-left: 10px;
+}
+
+.c{
+    margin-right: 10vw;
+}
+
+
+@media all and (max-width: 768px) {
+    .container{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        left: 200px;
+        position: absolute;
+        overflow-y: scroll;
+        bottom: 0;
+
+    }
+    
+    .sidebar{
+        width: 200px;
+    }
+
+    img {
+        height: 35vh;
+        width: 15vw;
+        min-width: 60vw;
+
+    }
+
+    
+.f{
+    border-radius: 6px;
+    transition: 0.5s;
+    height: 40vh;
+    /* max-width: 100px; */
+    display: flex;
+    align-items: center;
+    left: 200px;
+
+}
+
+input:checked ~ .container { 
+    left: 0;
+}
+
+input:checked ~ label {
+    left: 0;
+}
+
+label{
+    left: 200px;
+}
+
+
+    
+
+
+ }
+
+ 
+@media all and (max-width: 480px) { 
+
+    .container{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        left: 100px;
+        position: absolute;
+        overflow-y: scroll;
+        bottom: 0;
+
+    }
+    
+    .sidebar{
+        width: 100px;
+    }
+
+    img {
+        height: 20vh;
+        width: 20vw;
+        min-width: 40vw;
+
+    }
+
+    
+.f{
+    border-radius: 6px;
+    transition: 0.5s;
+    height: 32vh;
+    display: flex;
+    align-items: center;
+    
+}
+
+input:checked ~ .container { 
+    left: 0;
+}
+
+input:checked ~ label {
+    left: 0;
+}
+
+label{
+    left: 100px;
+}
+
+
+    
+
+
+}
+
+
+
+ @media all and (min-width: 768px) and (max-width: 1024px) {
+     
+    .container{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        left: 200px;
+        position: absolute;
+        overflow-y: scroll;
+        bottom: 0;
+
+    }
+    
+    .sidebar{
+        width: 200px;
+    }
+
+    img {
+        height: 20vh;
+        width: 20vw;
+        min-width: 40vw;
+
+    }
+
+    
+.f{
+    border-radius: 6px;
+    transition: 0.5s;
+    height: 32vh;
+    display: flex;
+    max-width: 50vw;
+    align-items: center;
+    margin-left: 230px;
+    
+    
+}
+
+input:checked ~ .container { 
+    left: 0;
+}
+
+input:checked ~ label {
+    left: 0;
+}
+
+
+    
+
+
+
+
+  } 
